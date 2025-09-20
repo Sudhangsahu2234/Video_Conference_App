@@ -30,9 +30,15 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
     setVideoClient(client);
   }, [user, isLoaded]);
 
-  if (!videoClient) return <Loader />;
+  // Temporarily allow rendering without Stream client for demo
+  // if (!videoClient) return <Loader />;
 
-  return <StreamVideo client={videoClient}>{children}</StreamVideo>;
+  if (videoClient) {
+    return <StreamVideo client={videoClient}>{children}</StreamVideo>;
+  }
+
+  // Render children without StreamVideo for demo purposes
+  return <>{children}</>;
 };
 
 export default StreamVideoProvider;
