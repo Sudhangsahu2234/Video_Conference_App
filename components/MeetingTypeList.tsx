@@ -70,32 +70,33 @@ const MeetingTypeList = () => {
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
 
   return (
-    <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+    <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4 animate-in fade-in duration-700">
       <HomeCard
         img="/icons/add-meeting.svg"
         title="New Meeting"
         description="Start an instant meeting"
+        className="bg-gradient-to-br from-blue-1 to-indigo-1 animate-in slide-in-from-left duration-500 delay-100"
         handleClick={() => setMeetingState('isInstantMeeting')}
       />
       <HomeCard
         img="/icons/join-meeting.svg"
         title="Join Meeting"
         description="via invitation link"
-        className="bg-blue-1"
+        className="bg-gradient-to-br from-purple-1 to-pink-1 animate-in slide-in-from-left duration-500 delay-200"
         handleClick={() => setMeetingState('isJoiningMeeting')}
       />
       <HomeCard
         img="/icons/schedule.svg"
         title="Schedule Meeting"
         description="Plan your meeting"
-        className="bg-purple-1"
+        className="bg-gradient-to-br from-violet-1 to-purple-1 animate-in slide-in-from-left duration-500 delay-300"
         handleClick={() => setMeetingState('isScheduleMeeting')}
       />
       <HomeCard
         img="/icons/recordings.svg"
         title="View Recordings"
         description="Meeting Recordings"
-        className="bg-yellow-1"
+        className="bg-gradient-to-br from-yellow-1 to-orange-1 animate-in slide-in-from-left duration-500 delay-400"
         handleClick={() => router.push('/recordings')}
       />
 

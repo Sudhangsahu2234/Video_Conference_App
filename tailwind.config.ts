@@ -20,13 +20,13 @@ const config = {
     extend: {
       colors: {
         dark: {
-          1: '#1C1F2E',
+          1: '#0f0f23',
           2: '#161925',
-          3: '#252A41',
-          4: '#1E2757',
+          3: '#1a1a2e',
+          4: '#16213e',
         },
         blue: {
-          1: '#0E78F9',
+          1: '#6366f1',
         },
         sky: {
           1: '#C9DDFF',
@@ -34,13 +34,22 @@ const config = {
           3: '#F5FCFF',
         },
         orange: {
-          1: '#FF742E',
+          1: '#f59e0b',
         },
         purple: {
-          1: '#830EF9',
+          1: '#8b5cf6',
         },
         yellow: {
-          1: '#F9A90E',
+          1: '#eab308',
+        },
+        pink: {
+          1: '#ec4899',
+        },
+        indigo: {
+          1: '#6366f1',
+        },
+        violet: {
+          1: '#8b5cf6',
         },
       },
       keyframes: {
@@ -52,10 +61,20 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideInFromLeft: {
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+        'slide-in-from-left': 'slideInFromLeft 0.5s ease-out',
       },
       backgroundImage: {
         hero: "url('/images/hero-background.png')",
